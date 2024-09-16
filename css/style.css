@@ -1,0 +1,707 @@
+/* ALL COMMON CSS START  */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: "Nunito", sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6{
+  font-family: "Montserrat", sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6, p{
+  margin: 0;
+  padding: 0;
+  line-height: 0.8;
+}
+
+a{
+  text-decoration: none;
+  display: inline-block;
+}
+
+ul, ol{
+  list-style-type: none;
+}
+/* ALL COMMON CSS END  */
+
+/* HEADER Part CSS START  */
+.navbar_area{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: transparent;
+  padding: 20px 0;
+  z-index: 999;
+}
+
+.navbar-brand img{
+  width: 70px;
+}
+
+.nav-link{
+  color: white;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 24px;
+  margin: 0 7px;
+}
+
+.nav-link:hover{
+  color: #e8516c;
+}
+
+/* HEADER Part CSS END  */
+
+/* BANNER Part CSS START  */
+#bannerPart{
+  background-image: url(../images/asset\ 15.jpeg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+.bg-overlay{
+  padding: 100px 0;
+  background-color: rgba(0, 0, 0, 0.69);
+  height: 100%;
+  width: 100%;
+}
+
+.container{
+  z-index: 2;
+}
+
+.banner-content{
+  text-align: center;
+  color: white;
+  max-width: 800px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 70px;
+}
+
+.banner-content h4{
+  font-size: 24px;
+  margin-bottom: 34px;
+}
+
+.banner-content h1{
+  font-size: 54px;
+  text-transform: uppercase;
+}
+
+.banner-content p{
+  font-size: 16px;
+  max-width: 500px;
+  line-height: 1.8;
+  margin: 24px auto 16px auto;
+  color: #FFFFFFBF;
+}
+
+.banner-content a{
+  color: white;
+  padding: 15px 32px;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  font-size: 14px;
+  font-weight: 700;
+  border: 1px solid #dee2e6;
+  border-radius: 50px;
+  margin-top: 18px;
+  transition: 0.5s;
+}
+
+.banner-content a:hover{
+  color: black;
+  background-color: #fff;
+}
+
+/*Add custom cursor so it auto inherits font styles*/
+.typed::after {
+	content: '|';
+	display: inline;
+	-webkit-animation: blink 0.7s infinite;
+	-moz-animation: blink 0.7s infinite;
+	animation: blink 0.7s infinite;
+}
+
+/*Removes cursor that comes with typed.js*/
+.typed-cursor{
+   opacity: 0;
+	display: none;
+}
+/*Custom cursor animation*/
+@keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-webkit-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-moz-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+/* BANNER Part CSS END  */
+
+/* ABOUT Part CSS START  */
+#aboutPart{
+  padding-top: 115px;
+  padding-bottom: 95px;
+}
+
+.about-feature img{
+  padding: 4px;
+  border: 1px solid #dee2e6;
+  border-radius: 6px;
+  background-color: #fff;
+}
+
+.about-content h2 span{
+  font-weight: 700;
+  color: #212529;
+  font-size: 32px;
+}
+
+.about-content h2{
+  color: #212529;
+  font-size: 32px;
+  margin-bottom: 8px;
+}
+
+.about-content h4{
+  color: #212529;
+  font-size: 24px;
+  margin-bottom: 10px;
+  margin-top: 28px;
+  line-height: 28px;
+}
+
+.about-content h4 span{
+  color: #e8516c;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.about-text{
+  margin-bottom: 16px;
+  color: #212529BF;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.about-socials ul{
+  padding-left: 0;
+}
+
+.about-socials ul li{
+  display: inline-block;
+  margin-right: 8px;
+}
+
+.about-socials ul li a{
+  font-size: 20px;
+  height: 42px;
+  width: 42px;
+  border-radius: 50%;
+  border: 2px solid #dee2e6;
+  line-height: 38px;
+  text-align: center;
+  color: black;
+  transition: 0.4s;
+}
+
+.about-socials ul li a:hover{
+  color: #e8516c;
+  border: 2px solid #e8516c;
+}
+/* ABOUT Part CSS END  */
+
+/* SERVICE Part CSS START  */
+#servicePart{
+  padding: 100px 0;
+  background-color: #F8F9FA;
+}
+
+.service-heading h2{
+  color: #212529;
+  font-size: 32px;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.service-heading p{
+  font-size: 16px;
+  max-width: 500px;
+  line-height: 1.8;
+  margin: 24px auto 16px auto;
+  color: #212529BF;
+  text-align: center;
+}
+
+.service-item{
+  padding: 24px;
+  margin-top: 24px;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.service-item i{
+  font-size: 44px;
+  color: #e8516c;
+  line-height: 1;
+}
+
+.service-item h5{
+  font-size: 20px;
+  color: #212529;
+  font-weight: 600;
+  margin-top: 32px;
+}
+
+.service-item-title-border{
+  height: 4px;
+  width: 40px;
+  background-color: #e8516c;
+  margin: 15px auto;
+}
+
+.service-item p{
+  text-align: center;
+  color: #212529BF;
+  line-height: 24px;
+  margin: 16px 0;
+}
+/* SERVICE Part CSS END  */
+
+/* HIRE ME Part CSS START  */
+#hireMePart{
+  padding: 100px 0;
+}
+
+.hire-me-content{
+  text-align: center;
+}
+
+.hire-me-content h2{
+  color: #212529;
+  font-size: 32px;
+  margin-bottom: 8px;
+  line-height: 38px;
+  font-weight: 700;
+}
+
+.hire-me-content a{
+  margin-top: 24px;
+  padding: 15px 32px;
+  background-color: #e8516c;
+  color: #fff;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+}
+/* HIRE ME Part CSS END  */
+
+/* CLIENT PART CSS START  */
+#clientPart{
+  padding: 100px 0;
+  background-color: #F8F9FA;
+}
+
+.client-heading h2{
+  color: #212529;
+  font-size: 32px;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.client-heading p{
+  font-size: 16px;
+  max-width: 500px;
+  line-height: 1.8;
+  margin: 24px auto 16px auto;
+  color: #212529BF;
+  text-align: center;
+}
+
+.client-heading h2 span{
+  font-weight: 700;
+  color: #212529;
+  font-size: 32px;
+}
+
+.client-slider{
+  text-align: center;
+  margin: 24px 12px 0;
+  padding: 24px 0 0;
+}
+
+.client-slider i{
+  font-size: 50px;
+  color: #e8516c;
+  line-height: 1;
+  display: block;
+  margin-bottom: 24px;
+}
+
+.client-slider img{
+  border-radius: 50%;
+  border: 1px solid #dee2e6;
+  padding: 4px;
+  line-height: 1;
+}
+
+.client-slider p{
+  font-size: 18px;
+  color: rgba(33, 37, 41, 0.75);
+  font-style: italic;
+  margin-top: 24px;
+  margin-bottom: 16px;
+  max-width: 750px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.client-slider .client-name{
+  font-style: normal;
+  font-size: 16px;
+}
+
+.client-name span{
+  font-weight: 700;
+}
+/* CLIENT PART CSS END  */
+
+/* WORKS Part CSS START  */
+#worksPart{
+  padding: 100px 0;
+}
+
+.works-heading h2{
+  color: #212529;
+  font-size: 32px;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.works-heading p{
+  font-size: 16px;
+  max-width: 500px;
+  line-height: 1.8;
+  margin: 24px auto 16px auto;
+  color: #212529BF;
+  text-align: center;
+}
+
+.works-heading h2 span{
+  font-weight: 700;
+  color: #212529;
+  font-size: 32px;
+}
+
+.works-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.works-btn button{
+  color: #212529;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 6px 16px;
+  letter-spacing: 0.45px;
+  border-radius: 30px;
+  margin-top: 5px;
+  margin-right: 10px;
+  border: none;
+  background-color: #fff;
+  text-transform: uppercase;
+}
+
+.works-btn button:hover{
+  color: white;
+  background-color: #e8516c;
+}
+
+.works-btn .active{
+  color: white;
+  background-color: #e8516c;
+}
+
+.works-item{
+  position: relative;
+  margin-top: 24px;
+}
+
+.works-item img{
+  border-radius: 8px;
+}
+
+.works-item-overlay{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  visibility: hidden;
+  opacity: 0;
+  transition: all linear 0.3s;
+  text-align: center;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 8px;
+}
+
+.works-item-overlay p{
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 12px;
+
+}
+
+.works-item-overlay h4{
+  font-size: 18px;
+  color: white;
+}
+
+.works-item:hover .works-item-overlay{
+  visibility: visible;
+  opacity: 1;
+}
+
+/* WORKS Part CSS END  */
+
+/* BLOG Part CSS START  */
+#blogPart{
+  padding: 100px 0;
+  background-color: #F8F9FA;
+}
+
+.blog-heading h2{
+  color: #212529;
+  font-size: 32px;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.blog-heading p{
+  font-size: 16px;
+  max-width: 500px;
+  line-height: 1.8;
+  margin: 24px auto 16px auto;
+  color: #212529BF;
+  text-align: center;
+}
+
+.blog-heading h2 span{
+  font-weight: 700;
+  color: #212529;
+  font-size: 32px;
+}
+
+.blog-container{
+  margin: 48px 12px 0;
+}
+
+.blog-item{
+  padding: 8px;
+  background-color: #fff;
+  border-radius: 6px;
+}
+
+.blog-item img{
+  border-radius: 6px;
+}
+
+.blog-item-content{
+  padding: 16px;
+}
+
+.blog-item-content h5{
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 700;
+}
+
+.blog-item-content h5 a{
+  color: #212529;
+  letter-spacing: 0.45px;
+}
+
+.blog-item-content p{
+  color: #212529BF;
+  line-height: 19px;
+  font-size: 16px;
+  margin-top: 16px;
+}
+
+.blog-item-content p span{
+  color: #e8516c;
+  font-weight: 700;
+}
+
+.blog-item-content .blog-item-desc{
+  color: #212529BF;
+  line-height: 24px;
+  font-size: 16px;
+  margin-top: 16px;
+}
+
+.blog-item-content .blog-item-read-more{
+  color: #212529BF;
+  line-height: 19px;
+  font-size: 16px;
+  margin-top: 16px;
+  font-weight: 700;
+}
+/* BLOG Part CSS END  */
+
+/* CONTACT Part CSS START  */
+#contactPart{
+  padding: 100px 0;
+}
+
+.contact-heading h2{
+  color: #212529;
+  font-size: 32px;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.contact-heading p{
+  font-size: 16px;
+  max-width: 500px;
+  line-height: 1.8;
+  margin: 24px auto 16px auto;
+  color: #212529BF;
+  text-align: center;
+}
+
+.contact-heading h2 span{
+  font-weight: 700;
+  color: #212529;
+  font-size: 32px;
+}
+
+.contact-details{
+  text-align: center;
+}
+
+.contact-details i{
+  font-size: 50px;
+  color: #e8516c;
+  line-height: 1;
+  display: block;
+  margin-bottom: 18px;
+}
+
+.contact-details h5{
+  font-size: 18px;
+  color: #212529;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.contact-details p{
+  font-size: 16px;
+  color: #212529BF;
+  margin-bottom: 16px;
+  line-height: 1.2;
+}
+
+.submit-btn{
+  margin-top: 6px;
+  padding: 15px 32px;
+  background-color: #e8516c;
+  color: #fff;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  border: none;
+}
+/* CONTACT Part CSS END  */
+
+/* FOOTER Part CSS START  */
+#footerPart{
+  padding: 70px 0;
+  background-color: #212121;
+}
+
+.footer-socials ul{
+  padding-left: 0;
+  text-align: center;
+}
+
+.footer-socials ul li{
+  display: inline-block;
+  margin-right: 8px;
+}
+
+.footer-socials ul li a{
+  font-size: 20px;
+  height: 44px;
+  width: 44px;
+  border-radius: 50%;
+  line-height: 44px;
+  text-align: center;
+  color: #ababab;
+  transition: 0.4s;
+  background-color: #f1f1f114
+} 
+
+.footer-socials ul li a:hover{
+  color: #e8516c;
+}
+
+.copyright{
+  text-align: center;
+}
+
+.copyright a{ 
+  font-size: 16px;
+  margin-top: 18px;
+  color: #ababab;
+}
+/* FOOTER Part CSS END  */
+
+/* BACK To TOP  */
+.back-to-top a{
+  position: fixed;
+  bottom: 15px;
+  right: 20px;
+  font-size: 24px;
+  background-color: #e8516c;
+  cursor: pointer;
+  height: 35px;
+  width: 35px;
+  line-height: 35px;
+  text-align: center;
+  border-radius: 3px;
+  transition: all 0.4s;
+}
+
+.back-to-top a i{
+  color: #fff;
+}
+
