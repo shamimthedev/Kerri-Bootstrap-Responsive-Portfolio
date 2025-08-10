@@ -1,58 +1,95 @@
-// Typed JS Here
-$(function(){
-	$(".typed").typed({
-		strings: ["Kerry Deo.", "A Designer.", "A Creator."],
-		// Optionally use an HTML element to grab strings from (must wrap each string in a <p>)
-		stringsElement: null,
-		// typing speed
-		typeSpeed: 30,
-		// time before typing starts
-		startDelay: 1200,
-		// backspacing speed
-		backSpeed: 20,
-		// time before backspacing
-		backDelay: 500,
-		// loop
-		loop: true,
-		// false = infinite
-		loopCount: 5,
-		// show cursor
-		showCursor: false,
-		// character for cursor
-		cursorChar: "|",
-		// attribute to type (null == text)
-		attr: null,
-		// either html or text
-		contentType: 'html',
-		// call when done callback function
-		callback: function() {},
-		// starting callback function before each string
-		preStringTyped: function() {},
-		//callback for every typed string
-		onStringTyped: function() {},
-		// callback for reset
-		resetCallback: function() {}
-	});
-});
+$(document).ready(function() {
+    // ===== TYPED.JS INITIALIZATION =====
+    if ($('.typed').length) {
+        // Clean up any existing instances
+        if ($('.typed').data('typed')) {
+            $('.typed').data('typed').destroy();
+        }
+        
+        try {
+            var typed = new Typed('.typed', {
+                strings: [
+                    "Kerri Deo.", 
+                    "a Designer.", 
+                    "a Developer.", 
+                    "a Freelancer."
+                ],
+                typeSpeed: 60,
+                backSpeed: 30,
+                startDelay: 500,
+                backDelay: 1500,
+                loop: true,
+                showCursor: true,
+                cursorChar: '|',
+                contentType: 'html'
+            });
+            
+            // Store instance for potential later use
+            $('.typed').data('typed', typed);
+            
+            console.log('Typed.js initialized successfully');
+        } catch (e) {
+            console.error('Typed.js error:', e);
+        }
+    } else {
+        console.warn('No .typed element found');
+    }
 
-// MIxitUp JS Here 
-var containerEl = document.querySelector('.filterMix');
+    // ===== MIXITUP FILTER =====
+    if (typeof mixitup !== 'undefined' && $('.filterMix').length) {
+        try {
+            var mixer = mixitup('.filterMix', {
+                animation: {
+                    duration: 300
+                }
+            });
+            console.log('Mixitup initialized successfully');
+        } catch (e) {
+            console.error('Mixitup error:', e);
+        }
+    }
 
-            var mixer = mixitup(containerEl);
+    // ===== HEADER SCROLL EFFECT =====
+    $(window).on('scroll', function() {
+        if ($(window).scrollTop() > 50) {
+            $('.navbar_area').addClass('scrolled');
+        } else {
+            $('.navbar_area').removeClass('scrolled');
+        }
+    });
 
-//==== Back-to-top button
-$(window).on('scroll', function(event) {
-	if($(this).scrollTop() > 600){
-			$('.back-to-top').fadeIn(200)
-	} else{
-			$('.back-to-top').fadeOut(200)
-	}
-});
-//==== Animate the scroll to top
-$('.back-to-top').on('click', function(event) {
-	event.preventDefault();
+    // ===== BACK TO TOP BUTTON =====
+    $(window).on('scroll', function() {
+        if ($(this).scrollTop() > 300) {
+            $('.back-to-top').addClass('show');
+        } else {
+            $('.back-to-top').removeClass('show');
+        }
+    });
 
-	$('html, body').animate({
-			scrollTop: 0,
-	}, 1000);
+    $('.back-to-top').on('click', function(e) {
+        e.preventDefault();
+        $('html, body').animate({scrollTop: 0}, 800);
+        return false;
+    });
+
+    // ===== SMOOTH SCROLLING =====
+    $('a[href*="#"]').not('[href="#"]').not('[href="#0"]').on('click', function(e) {
+        if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && 
+            location.hostname == this.hostname) {
+            var target = $(this.hash);
+            target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+            if (target.length) {
+                e.preventDefault();
+                $('html, body').animate({
+                    scrollTop: target.offset().top - 70
+                }, 800);
+            }
+        }
+    });
+
+    // ===== MOBILE MENU CLOSE =====
+    $('.navbar-nav>li>a').on('click', function(){
+        $('.navbar-collapse').collapse('hide');
+    });
 });
