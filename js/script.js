@@ -93,3 +93,42 @@ $(document).ready(function() {
         $('.navbar-collapse').collapse('hide');
     });
 });
+
+$(document).ready(function() {
+    // Close mobile menu when clicking a link
+    $('.navbar-nav>li>a').on('click', function(){
+        $('.navbar-collapse').collapse('hide');
+    });
+    
+    // Add active class on scroll
+    $(window).on('scroll', function() {
+        var scrollPosition = $(window).scrollTop();
+        
+        $('section').each(function() {
+            var currentSection = $(this);
+            var sectionId = currentSection.attr('id');
+            var sectionOffset = currentSection.offset().top - 100;
+            var sectionHeight = currentSection.outerHeight();
+            
+            if (scrollPosition >= sectionOffset && scrollPosition < sectionOffset + sectionHeight) {
+                $('.nav-link').removeClass('active');
+                $('.nav-link[href="#' + sectionId + '"]').addClass('active');
+            }
+        });
+    });
+    
+    // Smooth scrolling
+    $('a[href*="#"]').not('[href="#"]').not('[href="#0"]').on('click', function(e) {
+        if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && 
+            location.hostname == this.hostname) {
+            var target = $(this.hash);
+            target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+            if (target.length) {
+                e.preventDefault();
+                $('html, body').animate({
+                    scrollTop: target.offset().top - 70
+                }, 800);
+            }
+        }
+    });
+});

@@ -156,13 +156,62 @@ img {
     box-shadow: none;
 }
 
-/* Change navbar toggler (hamburger) color to white */
+/* Navbar Toggler Icon - White Color */
+.navbar-toggler {
+    border-color: rgba(255,255,255,0.1);
+}
+
 .navbar-toggler-icon {
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
 
-.navbar-toggler {
-    border-color: rgba(255,255,255,0.5);
+/* Mobile Menu Styles */
+@media (max-width: 991.98px) {
+    .navbar-collapse {
+        background-color: rgba(0,0,0,0.95);
+        padding: 20px;
+        margin-top: 15px;
+        border-radius: 5px;
+        text-align: center;
+    }
+    
+    .navbar-nav {
+        padding-top: 10px;
+    }
+    
+    .nav-item {
+        margin: 5px 0;
+    }
+}
+
+/* Active Nav Link */
+.nav-link.active {
+    color: var(--primary-color) !important;
+}
+
+/* Hover Effects */
+.nav-link {
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.nav-link:hover {
+    color: var(--primary-color) !important;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--primary-color);
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
 }
 
 /* Header */
